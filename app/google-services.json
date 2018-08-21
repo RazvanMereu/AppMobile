@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "934995017267",
+    "firebase_url": "https://cash-track.firebaseio.com",
+    "project_id": "cash-track",
+    "storage_bucket": "cash-track.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934995017267:android:dd07259c9ff1d3aa",
+        "android_client_info": {
+          "package_name": "com.example.razvan.licenta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934995017267-0f0tvlpm0rbujum6g4t6n60i6511kk4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVEGeOezxMhk--hpvGjo9w1nkFfl0_bN0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
