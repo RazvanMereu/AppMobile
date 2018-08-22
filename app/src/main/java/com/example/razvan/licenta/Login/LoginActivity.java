@@ -1,4 +1,4 @@
-package com.example.razvan.licenta;
+package com.example.razvan.licenta.Login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.razvan.licenta.Main.ProfileActivity;
+import com.example.razvan.licenta.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (v == textViewSignUp) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, RegisterActivity.class));
         }
     }
 
