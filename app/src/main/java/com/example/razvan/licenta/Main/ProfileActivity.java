@@ -1,4 +1,4 @@
-package com.example.razvan.licenta;
+package com.example.razvan.licenta.Main;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.razvan.licenta.Login.LoginActivity;
+import com.example.razvan.licenta.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

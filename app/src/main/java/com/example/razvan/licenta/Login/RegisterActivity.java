@@ -1,4 +1,4 @@
-package com.example.razvan.licenta;
+package com.example.razvan.licenta.Login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,12 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.razvan.licenta.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private Button buttonRegister;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        progressDialog = new ProgressDialog(MainActivity.this);
+        progressDialog = new ProgressDialog(RegisterActivity.this);
 
         buttonRegister = findViewById(R.id.buttonRegister);
 
@@ -76,10 +77,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //user successfully registered
-                            Toast.makeText(MainActivity.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         } else {
-                            Toast.makeText(MainActivity.this, "Could not register!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Could not register!", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         }
                     }
