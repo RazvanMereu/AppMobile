@@ -1,29 +1,19 @@
-package com.example.razvan.licenta.Overview;
+package com.example.razvan.licenta.Menu;
 
-public class Overview_ListView {
-    private int id;
+public class OverviewListView {
     private String name;
-    private int amount;
+    private double amount;
     private String date;
     private String note;
 
 
-    public Overview_ListView (int id, String name, int amount, String date, String note){
-        this.id = id;
+    public OverviewListView(String name, double amount, String date, String note){
         this.name = name;
         this.amount = amount;
         this.date = date;
         this.note = note;
 
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -34,7 +24,7 @@ public class Overview_ListView {
         this.name = name;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 

@@ -44,7 +44,7 @@ public class Setting extends Activity {
         addCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Tab1.class);
+                Intent i = new Intent(getApplicationContext(),CategoryAdd.class);
                 startActivity(i);
             }
         });
