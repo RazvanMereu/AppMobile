@@ -11,18 +11,15 @@ import com.example.razvan.licenta.R;
 
 import java.util.List;
 
-public class Tab1_Adapter extends BaseAdapter {
+public class Category_Adapter extends BaseAdapter {
 
     Context context;
-    List<Tab1_ListView> records;
+    List<Category> records;
 
-
-    public Tab1_Adapter (Context context, List<Tab1_ListView> records){
+    public Category_Adapter(Context context, List<Category> records) {
         this.context = context;
         this.records = records;
-
     }
-
 
     @Override
     public int getCount() {
@@ -35,7 +32,7 @@ public class Tab1_Adapter extends BaseAdapter {
     }
 
     @Override
-    public long getItemId(int position){
+    public long getItemId(int position) {
         return 0;
     }
 
@@ -45,7 +42,7 @@ public class Tab1_Adapter extends BaseAdapter {
 
         View view = View.inflate(context, R.layout.tab1_list, null);
 
-        TextView txtCategoryName = (TextView)view.findViewById(R.id.txtCategoryName);
+        TextView txtCategoryName = (TextView) view.findViewById(R.id.txtCategoryName);
         txtCategoryName.setText(records.get(position).getName());
 
         return view;

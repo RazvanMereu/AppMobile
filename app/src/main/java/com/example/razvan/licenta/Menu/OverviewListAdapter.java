@@ -1,4 +1,4 @@
-package com.example.razvan.licenta.Overview;
+package com.example.razvan.licenta.Menu;
 
 import android.content.Context;
 import android.view.View;
@@ -12,11 +12,11 @@ import com.example.razvan.licenta.R;
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class Overview_List_Adapter extends BaseAdapter {
+public class OverviewListAdapter extends BaseAdapter {
     Context context;
-    List<Overview_ListView> listOverview;
+    List<OverviewListView> listOverview;
 
-    public Overview_List_Adapter(Context context, List<Overview_ListView> listOverview){
+    public OverviewListAdapter(Context context, List<OverviewListView> listOverview){
         this.context = context;
         this.listOverview = listOverview;
     }

@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/add"
         android:title="Add"
         android:icon="@mipmap/ic_add"
-        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/action_1"
         android:orderInCategory="100"
         android:title="Settings"
-        app:showAsAction="never"
-        tools:ignore="MissingPrefix">
+        app:showAsAction="never" >
         <menu>
 
 
@@ -27,7 +23,7 @@
 
             <item
                 android:id="@+id/exit"
-                android:title="Exit"
+                android:title="Logouot"
                 app:showAsAction="withText" />
 
 
