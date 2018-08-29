@@ -68,13 +68,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private List<OverviewListView> getCentralizedResults(List<OverviewListView> overviewListViews) {
-        List<OverviewListView> listViews = new ArrayList<>();
-
-
-        return listViews;
-    }
-
     public static List<GraphList> getGraphList() {
         return graphList;
     }

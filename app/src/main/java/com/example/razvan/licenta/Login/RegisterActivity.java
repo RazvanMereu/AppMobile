@@ -36,16 +36,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
         progressDialog = new ProgressDialog(RegisterActivity.this);
-
         buttonRegister = findViewById(R.id.buttonRegister);
-
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
 
         textViewSignin = findViewById(R.id.textViewSignin);
-
         buttonRegister.setOnClickListener(this);
         textViewSignin.setOnClickListener(this);
 

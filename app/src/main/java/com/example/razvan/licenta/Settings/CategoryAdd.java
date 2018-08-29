@@ -43,7 +43,7 @@ public class CategoryAdd extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab1);
 
-        cancel = (Button) findViewById(R.id.btnCancelAdd);
+        cancel = findViewById(R.id.btnCancelAdd);
         listView = findViewById(R.id.listAddCategory);
         btnAdd = findViewById(R.id.btnAddCategory);
         inputLabel = findViewById(R.id.week_view_category);
@@ -59,28 +59,19 @@ public class CategoryAdd extends Activity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
                 listViews.clear();
-
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     Category category = new Category(ds.getKey(), ds.getValue().toString());
                     listViews.add(category);
                 }
-
                 loadListView();
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.e("CategoryAdd", databaseError.getMessage());
             }
         });
-
-//        loadListView();
-
-        Log.e("asd", "!! " + mUser.getUid());
-
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,23 +83,21 @@ public class CategoryAdd extends Activity {
 
                 if (category_name.trim().length() > 0) {
                     DatabaseReference current_user_db = mFirebaseDatabase.getReference().child("Users").child(mUser.getUid());
-
-                    myRef.child(postId).setValue(category_name);
-
-
+                    if (postId != null) {
+                        myRef.child(postId).setValue(category_name);
+                    }
                     inputLabel.setText("");
-
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(inputLabel.getWindowToken(), 0);
+                    if (imm != null) {
+                        imm.hideSoftInputFromWindow(inputLabel.getWindowToken(), 0);
+                    }
 
                     Toast.makeText(getApplication(), "Successfully Added!", Toast.LENGTH_SHORT).show();
                     //  loadListView();
-
                 } else {
                     Toast.makeText(getApplication(), "Please enter category name",
                             Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
@@ -129,7 +118,6 @@ public class CategoryAdd extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.e("i am here", listViews.get(position).getName());
                 showEditBox(listViews.get(position).getName(), position);
             }
         });
